@@ -1,0 +1,11 @@
+D:\Code\Project\WEBORDERPROCUREMENT\wop\wopApi\bin\Debug\netcoreapp2.0\wopApi.deps.json
+D:\Code\Project\WEBORDERPROCUREMENT\wop\wopApi\bin\Debug\netcoreapp2.0\wopApi.runtimeconfig.json
+D:\Code\Project\WEBORDERPROCUREMENT\wop\wopApi\bin\Debug\netcoreapp2.0\wopApi.runtimeconfig.dev.json
+D:\Code\Project\WEBORDERPROCUREMENT\wop\wopApi\bin\Debug\netcoreapp2.0\wopApi.dll
+D:\Code\Project\WEBORDERPROCUREMENT\wop\wopApi\bin\Debug\netcoreapp2.0\wopApi.pdb
+D:\Code\Project\WEBORDERPROCUREMENT\wop\wopApi\obj\Debug\netcoreapp2.0\wopApi.csprojAssemblyReference.cache
+D:\Code\Project\WEBORDERPROCUREMENT\wop\wopApi\obj\Debug\netcoreapp2.0\wopApi.csproj.CoreCompileInputs.cache
+D:\Code\Project\WEBORDERPROCUREMENT\wop\wopApi\obj\Debug\netcoreapp2.0\wopApi.AssemblyInfoInputs.cache
+D:\Code\Project\WEBORDERPROCUREMENT\wop\wopApi\obj\Debug\netcoreapp2.0\wopApi.AssemblyInfo.cs
+D:\Code\Project\WEBORDERPROCUREMENT\wop\wopApi\obj\Debug\netcoreapp2.0\wopApi.dll
+D:\Code\Project\WEBORDERPROCUREMENT\wop\wopApi\obj\Debug\netcoreapp2.0\wopApi.pdb
