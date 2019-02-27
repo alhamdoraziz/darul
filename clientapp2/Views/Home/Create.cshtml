@@ -1,0 +1,119 @@
+﻿@model wopApi.Models.KategoriBarangJasaTm
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Kategori Barang Jasa</h4>
+<hr />
+<form asp-action="Create">
+    <div class="row">
+        <div class="col-md-12">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Jenis" class="control-label"></label>
+                <input asp-for="Jenis" class="form-control" />
+                <span asp-validation-for="Jenis" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Kategori" class="control-label"></label>
+                <input asp-for="Kategori" class="form-control" />
+                <span asp-validation-for="Kategori" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="StatusFlow" class="control-label"></label>
+                <input asp-for="StatusFlow" class="form-control" />
+                <span asp-validation-for="StatusFlow" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <!--<div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Nikinput" class="control-label"></label>
+                <input asp-for="Nikinput" class="form-control" />
+                <span asp-validation-for="Nikinput" class="text-danger"></span>
+            </div> 
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="DateInput" class="control-label"></label>
+                <input asp-for="DateInput" class="form-control" />
+                <span asp-validation-for="DateInput" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="DateApprover" class="control-label"></label>
+                <input asp-for="DateApprover" class="form-control" />
+                <span asp-validation-for="DateApprover" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Nikapprover" class="control-label"></label>
+                <input asp-for="Nikapprover" class="form-control" />
+                <span asp-validation-for="Nikapprover" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Nikupdate" class="control-label"></label>
+                <input asp-for="Nikupdate" class="form-control" />
+                <span asp-validation-for="Nikupdate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="DateUpdate" class="control-label"></label>
+                <input asp-for="DateUpdate" class="form-control" />
+                <span asp-validation-for="DateUpdate" class="text-danger"></span>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default pull-right" />
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <center>
+            <a asp-action="Index">Back to List</a>
+        </center>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    
+}

@@ -1,0 +1,121 @@
+﻿@model IEnumerable<wopApi.Models.KategoriBarangJasaTm>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+<div>  @TempData["message"] 
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <a asp-action="Create" class="pull-right">Create New</a>
+    </div>
+</div>
+    <table class="table" id="testDatatable">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Jenis)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Kategori)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Status)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nikinput)
+                </th>                
+                <th>
+                    @Html.DisplayNameFor(model => model.DateUpdate)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if ((Model.Count() != 0))
+            {
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Jenis)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Kategori)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Status)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nikinput)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DateUpdate)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Approve", "chstatus",
+                           new { id = item.Id },
+                           new { data_action = "smartmodalblock" ,
+                               data_status = "approve",
+                               data_msg= "Approve this category <strong class='text-capitalize'>"+item.Kategori+"</strong> ??"
+                           }) |
+                            @Html.ActionLink("Reject", "chstatus",
+                           new { id = item.Id },
+                           new
+                           {
+                               data_action = "smartmodalblock",
+                               data_status = "reject",
+                               data_msg = "Reject this category <strong class='text-capitalize'>" + item.Kategori + "</strong> ??"
+                           }) |
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                            @Html.ActionLink("Delete", "delete",
+                          new { id = item.Id },
+                          new
+                          {
+                              data_action = "smartmodalblock",
+                              data_status = "delete",
+                              data_msg = "Delete this category <strong class='text-capitalize'>" + item.Kategori + "</strong> ??"
+                          }) |
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="6"> <center>No Record</center></td>   
+                </tr>
+
+            }
+        </tbody>
+    </table>
+    <a href="" class="ayub" id="darul"></a>
+
+<script>
+  
+    $(document).ready(function () { 
+        $("#testDatatable").dataTable({
+            responsive: !0,
+            "destroy": !0,
+            processing: !0,
+            serverSide: !1,
+            "fixedHeader": !0,
+            "pagingType": "simple_numbers"    
+            //, "ajax": { "url": "Tables/Kategoridatalist", "type": "GET" }
+        });
+    });
+
+    $.ajax({
+        type: "GET", url: "Tables/Kategoridatalist",success: function (data) {
+            console.log(data);
+        }
+    });
+</script>
